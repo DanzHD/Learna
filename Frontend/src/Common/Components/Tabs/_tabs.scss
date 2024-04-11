@@ -1,0 +1,33 @@
+@import "../../../Styles/_vars.scss";
+@import "../../../Styles/themes";
+
+@include themify($themes) {
+    .tabs {
+        display: inline-grid;
+        grid-auto-flow: column;
+        cursor: pointer;
+        border: 1px solid lightgrey;
+        grid-template-columns: auto;
+        &--full-width {
+            width: 100%;
+
+        }
+
+    }
+
+    .tab {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+        opacity: 50%;
+        &--selected {
+            background-color: lightgrey;
+            opacity: 100%;
+
+
+
+        }
+    }
+
+}

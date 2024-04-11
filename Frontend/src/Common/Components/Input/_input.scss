@@ -1,0 +1,36 @@
+@import "../../../Styles/_vars.scss";
+@import "../../../Styles/_themes.scss";
+@include themify($themes) {
+
+    .input {
+
+        border: 1px solid lightgrey;
+        height: 36px;
+        font-size: 16px;
+        padding-left: 8px;
+
+        &--full-width {
+            width: 100%;
+        }
+
+        &--dynamic-width {
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        &:hover {
+            background-color: #efefef;
+        }
+
+        &:focus {
+            outline: none !important;
+            border: 1px solid themed("primary");
+        }
+
+        &--small {
+            font-size: 12px;
+            height: 32px;
+            padding-left: 4px;
+        }
+    }
+}

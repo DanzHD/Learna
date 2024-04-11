@@ -1,0 +1,1 @@
+export const BACKEND_ENDPORT = import.meta.env.VITE_BACKEND_ENDPORT;

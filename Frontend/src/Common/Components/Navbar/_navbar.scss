@@ -1,0 +1,126 @@
+@import "../../../Styles/_vars.scss";
+@import "../../../Styles/_themes.scss";
+@import "../../../Styles/_index.scss";
+
+@include themify($themes) {
+    .navbar {
+        min-height: 60px;
+        min-width: 100vw;
+        height: 60px;
+        background-color: themed("primary");
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 1px 0 0 lightgray;
+    }
+
+}
+
+.left__items, .right__items {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    padding: 0;
+    align-items: center;
+    cursor: pointer;
+
+    @media screen and (max-width: $mobile-width) {
+        gap: 20px
+    }
+}
+
+.logo {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: monospace;
+    letter-spacing: 0.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.text.left__item, .text.right__item {
+    color: white;
+
+    @media screen and (max-width: $mobile-width) {
+        display: none;
+    }
+}
+
+.left__items__menu {
+    @media screen and (min-width: $mobile-width) {
+        display: none !important;
+    }
+}
+
+.logo-container {
+    display: flex;
+    gap: 5px;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    left: 10px;
+    z-index: 1;
+    ul {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 2px 2px lightgray;
+        animation: fadeIn 0.5s linear;
+        background-color: white;
+        li {
+            list-style: none;
+        }
+    }
+
+    p.text {
+        font-size: 18px;
+        color: black !important;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+
+    }
+
+
+}
+
+.profile-menu {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+    box-shadow: 0 0 2px 2px lightgray;
+    padding: 20px;
+    animation: fadeIn 0.5s linear;
+    background-color: white;
+    box-sizing: border-box;
+    right: 1px;
+    p.text {
+        color: black;
+        font-size: 18px;
+    }
+
+}
+
+.profile-menu-icon {
+    position: relative;
+}
